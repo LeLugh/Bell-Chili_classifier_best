@@ -5,11 +5,13 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 
 # Load your trained model
-MODEL_PATH = "custom_cnn_model.h5"  # change if needed
+from keras.models import load_model
+
+MODEL_PATH = "Bell-Chili_classifier_best.h5"
 model = load_model(MODEL_PATH)
 
 # Match the size you used in training (128x128 or 224x224)
-IMG_SIZE = (224, 224)
+IMG_SIZE = (128, 128)
 
 # Class names (match your dataset order)
 class_names = ["bell", "chili"]
